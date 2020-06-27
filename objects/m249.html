@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><style type="text/css">
+/* Animation */
+
+@keyframes rotation {
+  0% { transform: rotateY(0); }
+  100% { transform: rotateY(360deg); }
+}
+
+body {
+  transform: translate3d(100px, 100px, 0)
+}
+
+.obj {
+  transition: transform 1s ease-in-out;
+  animation-name: rotation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}</style><style type="text/css">
+/* Styles */
+.obj {
+  backface-visibility: hidden;
+}
+
+.obj-face svg {
+  stroke: black;
+  stroke-width: 1px;
+  fill: red;
+}
+
+.obj-face svg text {
+  stroke: none;
+  fill: black;
+  font-size: 20px;
+}</style><style type="text/css">
+/* 3D Transformations */
+.obj {
+  transform-origin: 0 0;
+  position: relative;
+}
+.obj, .obj * {
+  transform-style: preserve-3d;
+}
+.obj-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+}</style></head><body><div class="obj"></div></body></html>

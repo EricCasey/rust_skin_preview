@@ -2,23 +2,21 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import parseWFObj from 'wavefront-obj-parser';
+
+var obj_rug = '/objects/m249_m249_saw.obj'
+var obj_m249 = '/objects/rug.obj'
+
+
 function App() {
+
+  console.log(obj_rug, obj_m249)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+APP AREA
+
+/objects/m249_m249_saw.obj
+
     </div>
   );
 }
